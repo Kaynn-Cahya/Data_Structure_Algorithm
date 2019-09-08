@@ -1,6 +1,7 @@
 from SortLibrary.MyBubbleSort import bubbleSort
 from SearchLibrary.MyBinarySearch import tryBinarySearch
 from SortLibrary.MyQuickSort import quickSort
+from SortLibrary.MyBrickSort import brickSort
 from Utils import *
 
 class BasicListTester:
@@ -34,6 +35,13 @@ class BasicListTester:
         self.warnIfAlreadySorted()
         for testCase in self.testCases:
             quickSort(testCase, useLomutoPartition)
+        self.isSorted = True
+        self.printTestCases()
+
+    def testBrickSort(self):
+        self.warnIfAlreadySorted()
+        for testCase in self.testCases:
+            brickSort(testCase)
         self.isSorted = True
         self.printTestCases()
 
